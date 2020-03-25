@@ -1,0 +1,15 @@
+{
+  "name": "action-js-inline",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:satackey/action-js-inline.git",
+  "author": "satackey <21271711+satackey@users.noreply.github.com>",
+  "license": "MIT",
+  "description": "description",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@types/node": "^12.12.31",
+    "actions-exec-wrapper": "^0.0.5",
+    "typescript": "^3.8.3"
+  }
+}
