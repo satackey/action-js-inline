@@ -7,14 +7,13 @@ branding:
 
 inputs:
   package-manager:
-    description: The package manager used to install the required packages
+    description: The package manager used to install the required packages.
     required: true
     default: npm
 
   required-packages:
-    description: Required package to run JavaScript snippet
+    description: Required package to run JavaScript snippet.
     required: false
-    default: '@actions/core @actions/exec @actions/github'
 
   script:
     description: The JavaScript snippet to be executed.

@@ -1,6 +1,12 @@
 import * as core from '@actions/core'
 import exec from 'actions-exec-wrapper'
 
+const defaultPackages = [
+  '@actions/core',
+  '@actions/exec',
+  '@actions/github',
+  'actions-exec-listener',
+]
 // https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction
 const AsyncFunction = Object.getPrototypeOf(async () => {}).constructor
 
@@ -60,7 +66,7 @@ const main = async () => {
   const script = core.getInput('script', { required: true })
 
   console.log(script)
-  await installPackages(packageManager, requiredPackages)
+  await installPackages(packageManager, [...requiredPackages, ...defaultPackages])
   await runScript(script)
 }
 
