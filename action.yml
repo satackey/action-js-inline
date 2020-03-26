@@ -1,25 +1,20 @@
 name: Execute JavaScript snippet inline
 description: Use JavaScript instead of shell script.
-
 branding:
   icon: git-branch
   color: white
-
 inputs:
   package-manager:
     description: The package manager used to install the required packages
     required: true
     default: npm
-
   required-packages:
     description: Required package to run JavaScript snippet
     required: false
     default: '@actions/core @actions/exec @actions/github'
-
   script:
     description: The JavaScript snippet to be executed.
     required: true
-
 runs:
   using: node12
-  main: index.ts
+  main: dist/index.js
