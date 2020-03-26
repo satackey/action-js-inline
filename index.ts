@@ -32,7 +32,7 @@ const installPackages = async (manager: PackageManager, packages: string[]) => {
 }
 
 const runScript = async (script: string) => {
-  const argsDict: { [key: string]: any} = {
+  const args: { [key: string]: any} = {
     Buffer,
     __dirname,
     __filename,
@@ -47,10 +47,8 @@ const runScript = async (script: string) => {
     URLSearchParams,
     WebAssembly,
   }
-  const argKeys = Object.keys(argsDict)
-  const argValues = Object.values(argsDict)
-  const scriptFunc: (...args: any[]) => any = new AsyncFunction(argKeys, script)
-  return await scriptFunc(...argValues)
+  const scriptFunc = new AsyncFunction(Object.keys(args), script)
+  return await scriptFunc(...Object.values(args))
 }
 
 const main = async () => {
@@ -63,7 +61,7 @@ const main = async () => {
 
   console.log(script)
   await installPackages(packageManager, requiredPackages)
-  await(runScript(script))
+  await runScript(script)
 }
 
 main().catch(e => {
