@@ -2,8 +2,8 @@ name: Execute JavaScript snippet inline
 description: Use JavaScript instead of shell script.
 
 branding:
-  icon: git-branch
-  color: white
+  icon: terminal
+  color: yellow
 
 inputs:
   package-manager:
