@@ -7,7 +7,7 @@ const AsyncFunction = Object.getPrototypeOf(async () => {}).constructor
 type PackageManager = 'npm' | 'yarn'
 function assertIsPackageManager(manager: string): asserts manager is PackageManager {
   if (manager !== 'npm' && manager !== 'yarn') {
-    throw new Error(`PackageManager is ${manager}, neither npm nor yarn.`)
+    throw new Error(`Specified node package manager is ${manager}, neither npm nor yarn.`)
   }
 }
 
