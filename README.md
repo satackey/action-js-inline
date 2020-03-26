@@ -4,7 +4,6 @@ Use JavaScript instead of shell script.
 ## Example
 ```yaml
 - name: Output current branch name
-  
   uses: satackey/action-js-online@v0.0.1
   with:
     # required-packages: axios
