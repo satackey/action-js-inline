@@ -7,9 +7,11 @@
   "license": "MIT",
   "description": "description",
   "dependencies": {
-    "@actions/core": "^1.2.3",
     "@types/node": "^12.12.31",
-    "actions-exec-wrapper": "^0.0.5",
+    "actions-exec-wrapper": "^0.0.5"
+  },
+  "devDependencies": {
+    "@actions/core": "^1.2.3",
     "typescript": "^3.8.3"
   }
 }
