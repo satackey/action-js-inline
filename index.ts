@@ -61,8 +61,8 @@ const main = async () => {
   const packageManager = core.getInput('package-manager', { required: true })
   assertIsPackageManager(packageManager)
   const requiredPackages = core.getInput('required-packages')
-    .split(' ') // 空白で分ける
-    .filter(pkg => pkg !== '') // 空文字は消す
+    .split(/\n|\s/) // Split by space or new line
+    .filter(pkg => pkg !== '') // Remove empty item
   const script = core.getInput('script', { required: true })
 
   console.log(script)
