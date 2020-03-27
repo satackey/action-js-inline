@@ -4,6 +4,7 @@ Run JavaScript instead of shell script in GitHub Actions.
 ## Example
 ```yaml
 - name: Output current branch name & date
+  # To use latest action, specify "release-master" instead of "v0.0.2"
   uses: satackey/action-js-inline@v0.0.2
   id: getdata
   with:
@@ -20,7 +21,6 @@ Run JavaScript instead of shell script in GitHub Actions.
       core.setOutput('branch', branch)
 
       // date
-
       const dateResponse = await axios('https://ntp-a1.nict.go.jp/cgi-bin/json')
       /* {
           "id": "ntp-a1.nict.go.jp",
