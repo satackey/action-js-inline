@@ -57,6 +57,6 @@ Run JavaScript instead of shell script in GitHub Actions.
 ## Contribution
 PRs are accepted.
 
-If you are having trouble or future request, [post new issue](https://github.com/satackey/action-js-inline/issues/new).
+If you are having trouble or feature request, [post new issue](https://github.com/satackey/action-js-inline/issues/new).
 
 <!-- ## Another Example -->
