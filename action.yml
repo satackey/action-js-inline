@@ -1,4 +1,4 @@
-name: Execute JavaScript snippet inline
+name: Execute JavaScript inline
 description: Use JavaScript instead of shell script.
 
 branding:

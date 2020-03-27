@@ -1,29 +1,39 @@
-# Execute JavaScript snippet inline
-Use JavaScript instead of shell script.
+# satackey/action-js-inline
+Run JavaScript instead of shell script in GitHub Actions.
 
 ## Example
 ```yaml
 - name: Output current branch name & date
-  uses: satackey/action-js-online@v0.0.1
-  id: output
+  uses: satackey/action-js-inline@v0.0.2
+  id: getdata
   with:
     required-packages: axios
     script: |
       const core = require('@actions/core')
       const axios = require('axios')
 
-      # branch
+      // branch
       const ref = process.env.GITHUB_REF
       const branch = ref.split('/').slice(-1)[0]
       console.log(`branch: ${branch}`)
       core.setOutput('branch', branch)
 
-      # date
-      const date = await axios('https://ntp-a1.nict.go.jp/cgi-bin/time?TZ=GMT')
+      // date
+
+      const dateResponse = await axios('https://ntp-a1.nict.go.jp/cgi-bin/json')
+      /* {
+          "id": "ntp-a1.nict.go.jp",
+          "it": 0.000,
+          "st": 1585285722.922,
+          "leap": 36,
+          "next": 1483228800,
+          "step": 1
+      } */
+      const date = new Date(dateResponse.data.st)
       console.log(`date: ${date}`)
       core.setOutput('date', date)
 
-
+# You can use datas as ${{ steps.getdata.outputs.branch }} and ${{ steps.getdata.outputs.date }}
 ```
 
 ## Inputs
@@ -31,7 +41,7 @@ Use JavaScript instead of shell script.
   The package manager used to install the required packages.
   Either `npm` or `yarn`.
 
-- `required-package` optinal
+- `required-package` optinal  
   Required package to run `script`.
   > Info: The following packages are automatically installed even if you do not write them.
   > - [`@actions/core`](https://github.com/actions/toolkit/tree/master/packages/core)
@@ -40,7 +50,7 @@ Use JavaScript instead of shell script.
   > - [`actions-exec-listener`](https://github.com/satackey/actions-exec-listener)
 
 
-- `script` **Required**
+- `script` **Required**  
     The JavaScript snippet to be executed.
 
 ## Contribution
