@@ -7,6 +7,7 @@ Run JavaScript instead of shell script in GitHub Actions.
   uses: satackey/action-js-inline@v0.0.2
   id: getdata
   with:
+    # Edit the following line to install packages required to run your script.
     required-packages: axios
     script: |
       const core = require('@actions/core')
