@@ -50,7 +50,6 @@ Run JavaScript instead of shell script in GitHub Actions.
   > - [`@actions/github`](https://github.com/actions/toolkit/tree/master/packages/github)
   > - [`actions-exec-listener`](https://github.com/satackey/actions-exec-listener)
 
-
 - `script` **Required**  
     The JavaScript snippet to be executed. The [await](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/await) operator is supported.
 
