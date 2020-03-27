@@ -52,7 +52,7 @@ Run JavaScript instead of shell script in GitHub Actions.
 
 
 - `script` **Required**  
-    The JavaScript snippet to be executed.
+    The JavaScript snippet to be executed. The [await](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/await) operator is supported.
 
 ## Contribution
 PRs are accepted.
