@@ -24,6 +24,6 @@ jobs:
         echo "##[set-output name=branch;]${GITHUB_REF#refs/heads/}"
 
     - name: Push
-      uses: satackey/release-js-action@v0.0.2
+      uses: satackey/release-js-action@release-support-docker-action
       with:
         push-branch: release-${{ steps.name.outputs.branch }}
