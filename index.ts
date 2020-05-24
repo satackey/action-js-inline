@@ -1,5 +1,5 @@
 import * as core from '@actions/core'
-import exec from 'actions-exec-wrapper'
+import exec from 'actions-exec-listener'
 
 const defaultPackages = [
   '@actions/core',
