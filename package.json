@@ -8,7 +8,7 @@
   "description": "description",
   "dependencies": {
     "@types/node": "^12.12.31",
-    "actions-exec-wrapper": "^0.0.5"
+    "actions-exec-listener": "^0.0.1"
   },
   "devDependencies": {
     "@actions/core": "^1.2.3",
