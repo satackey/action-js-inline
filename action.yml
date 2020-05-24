@@ -1,24 +1,19 @@
 name: Execute JavaScript inline
 description: Use JavaScript instead of shell script.
-
 branding:
   icon: terminal
   color: yellow
-
 inputs:
   package-manager:
     description: The package manager used to install the required packages.
     required: true
     default: npm
-
   required-packages:
     description: Required package to run JavaScript snippet.
     required: false
-
   script:
     description: The JavaScript snippet to be executed.
     required: true
-
 runs:
   using: node12
-  main: index.ts
+  main: dist/index.js
