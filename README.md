@@ -42,7 +42,7 @@ Run JavaScript instead of shell script in GitHub Actions.
   The package manager used to install the required packages.
   Either `npm` or `yarn`.
 
-- `required-package` optinal  
+- `required-packages` optional  
   Line or space separated package names required to execute the scirpt.
   > Info: The following packages are automatically installed even if you do not write them.
   > - [`@actions/core`](https://github.com/actions/toolkit/tree/master/packages/core)
