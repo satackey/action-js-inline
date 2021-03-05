@@ -4,8 +4,8 @@ Run JavaScript instead of shell script in GitHub Actions.
 ## Example
 ```yaml
 - name: Output current branch name & date
-  # To use latest action, specify "release-master" instead of "v0.0.3"
-  uses: satackey/action-js-inline@v0.0.3
+  # To use latest action, specify "release-master" instead of "v0.0.2"
+  uses: satackey/action-js-inline@v0.0.2
   id: getdata
   with:
     # Edit the following line to install packages required to run your script.
